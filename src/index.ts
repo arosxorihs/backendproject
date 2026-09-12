@@ -6,6 +6,9 @@ const PORT = 3000;
 // Middleware giúp Express đọc được body gửi lên dạng JSON
 app.use(express.json());
 
+// Cho phép truy cập các file tĩnh trong thư mục 'public'
+app.use(express.static('public'));
+
 // 1. Định nghĩa kiểu dữ liệu cho một Task (TypeScript Interface)
 interface Task {
   id: number;
